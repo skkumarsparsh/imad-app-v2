@@ -10,6 +10,6 @@ button.onclick = function() {
             }
         }
     };
-    resource.open('GET','http://skkumarsparsh.imad.hasura.io/counter', true);
+    resource.open('GET','http://skkumarsparsh.imad.hasura-app.io/counter', true);
     resource.send(null);
 };
