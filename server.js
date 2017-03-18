@@ -17,6 +17,8 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
+var pool = new Pool(config);
+
 function createTemplate(data) {
     var title = data.title;
     var heading = data.heading;
@@ -105,8 +107,6 @@ app.post('/login', function(req, res) {
         }
     });    
 });
-
-var pool = new Pool(config);
 
 app.get('/test-db', function(req, res) {
     // make a select request
